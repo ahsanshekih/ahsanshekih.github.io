@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>AHSAN DA BEST</title>
+        <title>Homepage</title>
         <style>
             * {
                 margin: 0;
@@ -42,23 +42,58 @@
                 display: table-cell;
             }
         </style>
-        <link href='http://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
         <meta name="robots" content="noindex">
     </head>
 
     <body>
         <div id="b">
-            <h1>Hi Ahsan</h1>
-            <p>Wagwan</p>
+            <h1>You are denied Ahsan's love</h1>
+            <p>Your IP address is in our servers block list thus cannot enter our site</p>
+            <p>Most likely blocked due to being a server, vpn or a proxy.</p>
+            <br>
+            <br>
+     
+            <div id="t">
+                <div>
+                    <div>IP:</div>
+                    <div id="ip">Wait...</div>
+                </div>
+                <div>
+                    <div>ASN:</div>
+                    <div id="asn">Wait...</div>
+                </div>
+                <div>
+                    <div>ISP:</div>
+                    <div id="isp">Wait...</div>
+                </div>
+                <div>COUNTRY:</div>
+                    <div id="country">Wait...</div>
+                </div>
+                <div>
+                <div>
+                    <div>DATE:</div>
+                    <div id="date">Wait...</div>
+                </div>
+            </div>
         </div>
 
-        <script type="application/javascript">
+         <script type="application/javascript">
             (window.onresize = function(event) {
                 document.body.style.paddingTop = (window.innerHeight - document.body.children[0].offsetHeight) / 2 + 'px'
-            })();
+            })()
+
+            function getgeoip(json) {
+                document.getElementById('ip').innerHTML = json.ip || 'Invalid'
+                document.getElementById('isp').innerHTML = json.isp || 'Invalid'
+                document.getElementById('asn').innerHTML = json.asn || 'Invalid'
+                document.getElementById('country').innerHTML = json.country || 'Invalid'
+                document.getElementById('date').innerHTML = new Date().toGMTString().slice(0, 17);
+
+            }
         </script>
 
-        <script type="application/javascript" src="http://www.telize.com/geoip?callback=getgeoip"></script>
+        <script type="application/javascript" src="https://www.telize.com/geoip?callback=getgeoip"></script>
     </body>
 
 </html>
