@@ -1,13 +1,9 @@
 #!/bin/sh -e
 
-# Exit early if no sessions with my username are found
-if ! who | grep -wq $USER; then
-  exit
-fi
 
 # Phone numbers
-MY_NUMBER='+xxx'
-HER_NUMBER='+xxx'
+MY_NUMBER='+447397006033'
+HER_NUMBER='+447925050333'
 
 REASONS=(
   'Working hard'
@@ -20,7 +16,7 @@ RANDOM_REASON=${REASONS[$rand]}
 MESSAGE="Late at work. "$RANDOM_REASON
 
 # Send a text message
-RESPONSE=`curl -fSs -u "$TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN" \
+RESPONSE=`curl -fSs -u "$AC1f3efe8cce99cd91d0f1e55a16f74edd:$4795e16db192cf6a745f8ccdc550bd9a" \
   -d "From=$MY_NUMBER" -d "To=$HER_NUMBER" -d "Body=$MESSAGE" \
   "https://api.twilio.com/2010-04-01/Accounts/$TWILIO_ACCOUNT_SID/Messages"`
 
