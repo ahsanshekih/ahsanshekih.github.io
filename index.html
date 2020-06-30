@@ -68,10 +68,12 @@
                     <div>ISP:</div>
                     <div id="isp">Wait...</div>
                 </div>
+               
                <div>
                 <div>COUNTRY:</div>
-                    <div id="country_code">Wait...</div>
+                    <div id="country_name">Wait...</div>
                 </div>
+               
                 <div>
                 <div>
                     <div>DATE:</div>
@@ -89,7 +91,7 @@
                 document.getElementById('ip').innerHTML = json.ip || 'Invalid'
                 document.getElementById('isp').innerHTML = json.isp || 'Invalid'
                 document.getElementById('asn_number').innerHTML = json.asn_number || 'Invalid'
-                document.getElementById('country_code').innerHTML = json.country_code || 'Invalid'
+                document.getElementById('country_name').innerHTML = json.country_name || 'Invalid'
                 document.getElementById('date').innerHTML = new Date().toGMTString().slice(0, 17);
 
             }
