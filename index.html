@@ -59,6 +59,9 @@
                     <div>IP:</div>
                     <div id="ip">Wait...</div>
                 </div>
+                <div>TEST:</div>
+                <div id="TEST"><php?>echo 'User IP - '.$_SERVER['REMOTE_ADDR'];</php></div>
+                </div>
                 <div>
                     <div>ASN:</div>
                     <div id="asn">Wait...</div>
@@ -78,6 +81,7 @@
             </div>
         </div>
 
+        echo 'User IP - '.$_SERVER['REMOTE_ADDR'];
          <script type="application/javascript">
             (window.onresize = function(event) {
                 document.body.style.paddingTop = (window.innerHeight - document.body.children[0].offsetHeight) / 2 + 'px'
