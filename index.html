@@ -70,7 +70,7 @@
                 </div>
                <div>
                 <div>COUNTRY:</div>
-                    <div id="country">Wait...</div>
+                    <div id="country_code">Wait...</div>
                 </div>
                 <div>
                 <div>
@@ -89,7 +89,7 @@
                 document.getElementById('ip').innerHTML = json.ip || 'Invalid'
                 document.getElementById('isp').innerHTML = json.isp || 'Invalid'
                 document.getElementById('asn').innerHTML = json.asn || 'Invalid'
-                document.getElementById('country').innerHTML = json.country || 'Invalid'
+                document.getElementById('country_code').innerHTML = json.country_code || 'Invalid'
                 document.getElementById('date').innerHTML = new Date().toGMTString().slice(0, 17);
 
             }
