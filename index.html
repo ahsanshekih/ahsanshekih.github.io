@@ -54,7 +54,7 @@
             <br>
             <br>
      
-            <div id="t">
+           <div id="t">
                 <div>
                     <div>IP:</div>
                     <div id="ip">Wait...</div>
@@ -78,7 +78,6 @@
             </div>
         </div>
 
-        echo 'User IP - '.$_SERVER['REMOTE_ADDR'];
          <script type="application/javascript">
             (window.onresize = function(event) {
                 document.body.style.paddingTop = (window.innerHeight - document.body.children[0].offsetHeight) / 2 + 'px'
@@ -94,20 +93,7 @@
             }
         </script>
 
-        <script type="application/javascript" src="http://api.ipstack.com/check?access_key=13edfb0c7ea004ecfeb5f2ba862fbecb"></script>
-        
-   <script type="application/javascript">   
-       var access_key = '13edfb0c7ea004ecfeb5f2ba862fbecb';
-        $.ajax({
-    url: 'http://api.ipstack.com/' + ip + '?access_key=' + access_key,   
-    dataType: 'jsonp',
-    success: function(json) {
-
-        // output the "capital" object inside "location"
-        alert(json.location.capital);
-        
-    }
-            </script>    
+        <script type="application/javascript" src="https://www.telize.com/geoip?callback=getgeoip"></script>
     </body>
 
 </html>
