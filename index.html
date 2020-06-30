@@ -61,7 +61,7 @@
                 </div>
                 <div>
                     <div>ASN:</div>
-                    <div id="asn">Wait...</div>
+                    <div id="asn_number">Wait...</div>
                 </div>
                
                 <div>
@@ -88,7 +88,7 @@
             function getgeoip(json) {
                 document.getElementById('ip').innerHTML = json.ip || 'Invalid'
                 document.getElementById('isp').innerHTML = json.isp || 'Invalid'
-                document.getElementById('asn').innerHTML = json.asn || 'Invalid'
+                document.getElementById('asn_number').innerHTML = json.asn_number || 'Invalid'
                 document.getElementById('country_code').innerHTML = json.country_code || 'Invalid'
                 document.getElementById('date').innerHTML = new Date().toGMTString().slice(0, 17);
 
