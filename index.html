@@ -59,9 +59,6 @@
                     <div>IP:</div>
                     <div id="ip">Wait...</div>
                 </div>
-                <div>TEST:</div>
-                <div id="TEST"><?php echo 'User IP - '.$_SERVER['REMOTE_ADDR'];?></div>
-                </div>
                 <div>
                     <div>ASN:</div>
                     <div id="asn">Wait...</div>
@@ -97,7 +94,20 @@
             }
         </script>
 
-        <script type="application/javascript" src="http://api.ipstack.com/134.201.250.155?access_key=13edfb0c7ea004ecfeb5f2ba862fbecb"></script>
+        <script type="application/javascript" src="http://api.ipstack.com/check
+    ? access_key = YOUR_ACCESS_KEYb"></script>
+        
+   <script type="application/javascript">    
+        $.ajax({
+    url: 'http://api.ipstack.com/' + ip + '?access_key=' + access_key,   
+    dataType: 'jsonp',
+    success: function(json) {
+
+        // output the "capital" object inside "location"
+        alert(json.location.capital);
+        
+    }
+            </script>    
     </body>
 
 </html>
